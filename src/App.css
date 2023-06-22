@@ -9,3 +9,8 @@
   gap: 10px;
   max-width: 1200px;
 }
+
+.app__wrapper-content {
+  grid-area: content;
+  background-color: rgb(202, 199, 199);
+}

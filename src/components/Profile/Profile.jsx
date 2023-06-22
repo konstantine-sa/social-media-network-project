@@ -3,7 +3,7 @@ import MyPosts from "./MyPosts/MyPosts";
 
 const Profile = () => {
   return (
-    <section className={classNames.profile}>
+    <section>
       <div className={classNames.profile__background}>
         <img
           className={classNames.profile__background_img}
