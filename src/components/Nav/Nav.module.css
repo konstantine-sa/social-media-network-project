@@ -3,11 +3,18 @@
   background-color: rgb(26, 122, 151);
 }
 
+.item {
+  margin: 20px;
+}
+
 .item a {
   text-decoration: none;
+  font-family: tahome, sans-serif;
+  font-weight: 400;
+  font-size: larger;
   color: white;
 }
 
-.active a {
+a.active {
   color: gold;
 }
