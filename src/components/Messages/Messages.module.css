@@ -1,0 +1,24 @@
+.dialogs__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  border: 1px solid red;
+}
+
+.dialogs {
+}
+
+.dialog {
+  padding: 10px;
+}
+
+.dialog.active {
+  color: brown;
+}
+
+.messages {
+}
+
+.message {
+  padding: 10px;
+}
