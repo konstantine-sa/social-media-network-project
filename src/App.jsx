@@ -17,7 +17,7 @@ function App() {
         <section className="app__wrapper-content">
           <Routes>
             <Route path="/profile" Component={Profile} />
-            <Route path="/messages" Component={Messages} />
+            <Route path="/messages/*" Component={Messages} />
             <Route path="/news" Component={News} />
             <Route path="/music" Component={Music} />
             <Route path="/settings" Component={Settings} />

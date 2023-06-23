@@ -1,6 +1,5 @@
 .nav {
   grid-area: nav;
-  background-color: rgb(26, 122, 151);
 }
 
 .item {
@@ -12,9 +11,9 @@
   font-family: tahome, sans-serif;
   font-weight: 400;
   font-size: larger;
-  color: white;
+  color: #2a5885;
 }
 
 a.active {
-  color: gold;
+  color: #5c9ce6;
 }
