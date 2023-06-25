@@ -1,16 +1,17 @@
 import classNames from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+  let postsElements = props.posts.map((mess) => (
+    <Post message={mess.message} key={mess.id} />
+  ));
+
   return (
     <div className={classNames.user__posts}>
       My Post
       <div />
       <div className={classNames.user__posts_new}>New Post</div>
-      <div className={classNames.posts}>
-        <Post message="This is my first post here" likesCount="6" />
-        <Post message="Here is the second post" />
-      </div>
+      <div className={classNames.posts}>{postsElements}</div>
     </div>
   );
 };
