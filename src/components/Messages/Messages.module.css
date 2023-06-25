@@ -22,8 +22,10 @@ a.active {
 }
 
 .messages {
+  background-color: aquamarine;
 }
 
 .message {
   padding: 10px;
+  /* background-color: brown; */
 }
