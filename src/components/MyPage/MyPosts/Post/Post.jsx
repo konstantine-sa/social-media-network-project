@@ -2,7 +2,6 @@
 import classNames from "./Post.module.css";
 
 const Post = (props) => {
-  console.log(props);
   return (
     <div className={classNames.item}>
       <img

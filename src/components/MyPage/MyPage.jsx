@@ -1,8 +1,8 @@
-import classNames from "./Profile.module.css";
+import classNames from "./MyPage.module.css";
 import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => {
+const MyPage = () => {
   return (
     <section>
       <ProfileInfo />
@@ -11,4 +11,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default MyPage;

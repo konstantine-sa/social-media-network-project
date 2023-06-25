@@ -7,8 +7,8 @@ const Nav = () => {
   return (
     <nav className={classNames.nav}>
       <div className={classNames.item}>
-        <NavLink to="/profile" className={setActive}>
-          Profile
+        <NavLink to="/mypage" className={setActive}>
+          My page
         </NavLink>
       </div>
       <div className={`${classNames.item}`}>

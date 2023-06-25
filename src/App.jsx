@@ -3,7 +3,7 @@ import "./App.css";
 import Messages from "./components/Messages/Messages";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
-import Profile from "./components/MyPage/Profile";
+import MyPage from "./components/MyPage/MyPage";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
@@ -16,7 +16,7 @@ function App() {
         <Nav />
         <section className="app__wrapper-content">
           <Routes>
-            <Route path="/profile" Component={Profile} />
+            <Route path="/mypage" Component={MyPage} />
             <Route path="/messages/*" Component={Messages} />
             <Route path="/news" Component={News} />
             <Route path="/music" Component={Music} />
