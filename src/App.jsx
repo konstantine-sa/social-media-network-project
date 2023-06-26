@@ -16,13 +16,16 @@ function App(props) {
         <Nav />
         <section className="app__wrapper-content">
           <Routes>
-            <Route path="/mypage/*" element={<MyPage posts={props.posts} />} />
+            <Route
+              path="/mypage/*"
+              element={<MyPage posts={props.state.myPage.posts} />}
+            />
             <Route
               path="/messages/*"
               element={
                 <Messages
-                  dialogsData={props.dialogsData}
-                  messagesData={props.messagesData}
+                  dialogsData={props.state.messagesPage.dialogsData}
+                  messagesData={props.state.messagesPage.messagesData}
                 />
               }
             />
