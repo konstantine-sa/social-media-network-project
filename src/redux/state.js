@@ -25,6 +25,8 @@ let state = {
       { id: 5, name: "Andrew" },
     ],
   },
+
+  sidebar: {},
 };
 
 export default state;

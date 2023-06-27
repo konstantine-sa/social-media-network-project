@@ -3,10 +3,11 @@ import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const MyPage = (props) => {
+  console.log(props.posts);
   return (
     <section>
       <ProfileInfo />
-      <MyPosts posts={props.posts} />
+      <MyPosts posts={props.posts.posts} />
     </section>
   );
 };
