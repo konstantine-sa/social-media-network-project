@@ -50,5 +50,3 @@ export let updateNewPostText = (newText) => {
 };
 
 export default state;
-
-// to delete 11111
