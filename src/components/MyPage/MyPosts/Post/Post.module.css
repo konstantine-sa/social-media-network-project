@@ -1,5 +1,6 @@
 .item {
   display: flex;
+
   justify-content: flex-start;
   color: #900;
   background-color: aquamarine;
@@ -18,13 +19,17 @@
   align-self: center;
 }
 
+.likes__thumbup {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px 0 10px;
+}
+
 .likes {
   display: flex;
   align-items: center;
 }
 
-.likes__thumbup {
-  width: 20px;
-  height: 20px;
-  margin: 0 5px 0 10px;
+.likes p {
+  margin: 0;
 }

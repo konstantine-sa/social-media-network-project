@@ -19,7 +19,14 @@ function App(props) {
           <Routes>
             <Route
               path="/mypage/*"
-              element={<MyPage posts={props.state.myPage} />}
+              element={
+                <MyPage
+                  posts={props.state.myPage}
+                  addPost={props.addPost}
+                  newPostText={props.state.myPage.newPostText}
+                  updateNewPostText={props.updateNewPostText}
+                />
+              }
             />
             <Route
               path="/messages/*"
