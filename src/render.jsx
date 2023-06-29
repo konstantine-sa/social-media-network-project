@@ -17,5 +17,3 @@ export let renderEntireTree = (state) => {
     </React.StrictMode>
   );
 };
-
-// to delete. Just a test
