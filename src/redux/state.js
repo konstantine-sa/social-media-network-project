@@ -1,4 +1,7 @@
-import { renderEntireTree } from "../render";
+// ==========================TEMP TO DELETE===============
+let renderEntireTree = () => {
+  console.log("State is changed");
+};
 
 let state = {
   myPage: {
@@ -33,7 +36,7 @@ let state = {
   sidebar: {},
 };
 
-export let addPost = () => {
+export const addPost = () => {
   let newPost = {
     id: 5,
     message: state.myPage.newPostText,
@@ -41,12 +44,16 @@ export let addPost = () => {
   };
   state.myPage.posts.push(newPost);
   state.myPage.newPostText = "";
-  renderEntireTree(state);
+  renderEntireTree();
 };
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
   state.myPage.newPostText = newText;
-  renderEntireTree(state);
+  renderEntireTree();
+};
+
+export const subscribe = (observer) => {
+  renderEntireTree = observer;
 };
 
 export default state;
