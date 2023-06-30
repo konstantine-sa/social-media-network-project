@@ -1,3 +1,7 @@
+// ====================================STORE==========
+const ADD_POST = "ADD-POST";
+const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+
 let store = {
   _state: {
     myPage: {
@@ -42,24 +46,8 @@ let store = {
     this._callSubscriber = observer;
   },
 
-  addPost() {
-    let newPost = {
-      id: 5,
-      message: this._state.myPage.newPostText,
-      likesCount: 0,
-    };
-    this._state.myPage.posts.push(newPost);
-    this._state.myPage.newPostText = "";
-    this._callSubscriber(this._state);
-  },
-
-  updateNewPostText(newText) {
-    this._state.myPage.newPostText = newText;
-    this._callSubscriber(this._state);
-  },
-
   dispatch(action) {
-    if (action.type === "ADD-POST") {
+    if (action.type === ADD_POST) {
       let newPost = {
         id: 5,
         message: this._state.myPage.newPostText,
@@ -68,11 +56,21 @@ let store = {
       this._state.myPage.posts.push(newPost);
       this._state.myPage.newPostText = "";
       this._callSubscriber(this._state);
-    } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+    } else if (action.type === UPDATE_NEW_POST_TEXT) {
       this._state.myPage.newPostText = action.newText;
       this._callSubscriber(this._state);
     }
   },
 };
+
+// ===========================ACTION CREATOR==========
+export const addPostActionCreator = () => ({
+  type: ADD_POST,
+});
+
+export const updateNewPostTextActionCreator = (text) => ({
+  type: UPDATE_NEW_POST_TEXT,
+  newText: text,
+});
 
 export default store;
