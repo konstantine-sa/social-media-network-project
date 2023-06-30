@@ -9,9 +9,8 @@ const MyPage = (props) => {
       <ProfileInfo />
       <MyPosts
         posts={props.posts.posts}
-        addPost={props.addPost}
         newPostText={props.newPostText}
-        updateNewPostText={props.updateNewPostText}
+        dispatch={props.dispatch}
       />
     </section>
   );

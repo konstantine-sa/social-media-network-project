@@ -31,13 +31,15 @@ let store = {
 
     sidebar: {},
   },
+  _callSubscriber() {
+    console.log("State is changed");
+  },
 
   getState() {
     return this._state;
   },
-
-  _callSubscriber() {
-    console.log("State is changed");
+  subscribe(observer) {
+    this._callSubscriber = observer;
   },
 
   addPost() {
@@ -56,8 +58,20 @@ let store = {
     this._callSubscriber(this._state);
   },
 
-  subscribe(observer) {
-    this._callSubscriber = observer;
+  dispatch(action) {
+    if (action.type === "ADD-POST") {
+      let newPost = {
+        id: 5,
+        message: this._state.myPage.newPostText,
+        likesCount: 0,
+      };
+      this._state.myPage.posts.push(newPost);
+      this._state.myPage.newPostText = "";
+      this._callSubscriber(this._state);
+    } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+      this._state.myPage.newPostText = action.newText;
+      this._callSubscriber(this._state);
+    }
   },
 };
 

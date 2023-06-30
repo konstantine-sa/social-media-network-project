@@ -22,9 +22,8 @@ function App(props) {
               element={
                 <MyPage
                   posts={props.state.myPage}
-                  addPost={props.addPost}
+                  dispatch={props.dispatch}
                   newPostText={props.state.myPage.newPostText}
-                  updateNewPostText={props.updateNewPostText}
                 />
               }
             />
