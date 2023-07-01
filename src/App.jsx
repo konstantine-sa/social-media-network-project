@@ -20,21 +20,12 @@ function App(props) {
             <Route
               path="/mypage/*"
               element={
-                <MyPage
-                  posts={props.state.myPage}
-                  dispatch={props.dispatch}
-                  newPostText={props.state.myPage.newPostText}
-                />
+                <MyPage posts={props.state.myPage} dispatch={props.dispatch} />
               }
             />
             <Route
               path="/messages/*"
-              element={
-                <Messages
-                  dialogsData={props.state.messagesPage}
-                  messagesData={props.state.messagesPage}
-                />
-              }
+              element={<Messages store={props.store} />}
             />
             <Route path="/news/*" element={<News />} />
             <Route path="/music/*" element={<Music />} />
