@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Messages from "./components/Messages/Messages";
+import MessagesContainer from "./components/Messages/MessagesContainer";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
 import MyPage from "./components/MyPage/MyPage";
@@ -20,12 +20,16 @@ function App(props) {
             <Route
               path="/mypage/*"
               element={
-                <MyPage posts={props.state.myPage} dispatch={props.dispatch} />
+                <MyPage
+                  posts={props.state.myPage}
+                  dispatch={props.dispatch}
+                  store={props.store}
+                />
               }
             />
             <Route
               path="/messages/*"
-              element={<Messages store={props.store} />}
+              element={<MessagesContainer store={props.store} />}
             />
             <Route path="/news/*" element={<News />} />
             <Route path="/music/*" element={<Music />} />
