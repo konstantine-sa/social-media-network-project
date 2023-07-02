@@ -7,7 +7,7 @@ const MyPage = (props) => {
   return (
     <section>
       <ProfileInfo />
-      <MyPostsContainer store={props.store} />
+      <MyPostsContainer />
     </section>
   );
 };

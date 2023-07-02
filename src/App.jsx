@@ -9,7 +9,6 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
 function App(props) {
-  // console.log(props);
   return (
     <BrowserRouter>
       <div className="app__wrapper">
@@ -17,20 +16,8 @@ function App(props) {
         <Nav />
         <section className="app__wrapper-content">
           <Routes>
-            <Route
-              path="/mypage/*"
-              element={
-                <MyPage
-                  posts={props.state.myPage}
-                  dispatch={props.dispatch}
-                  store={props.store}
-                />
-              }
-            />
-            <Route
-              path="/messages/*"
-              element={<MessagesContainer store={props.store} />}
-            />
+            <Route path="/mypage/*" element={<MyPage />} />
+            <Route path="/messages/*" element={<MessagesContainer />} />
             <Route path="/news/*" element={<News />} />
             <Route path="/music/*" element={<Music />} />
             <Route path="/settings/*" element={<Settings />} />
